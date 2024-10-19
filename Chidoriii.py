@@ -51,4 +51,4 @@ finally:
     cap.release()  # Release the webcam
     cv2.destroyAllWindows()  # Close all OpenCV windows
 
-#changes
+#changes again

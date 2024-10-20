@@ -50,5 +50,3 @@ finally:
     # Clean up resources
     cap.release()  # Release the webcam
     cv2.destroyAllWindows()  # Close all OpenCV windows
-
-#okok

@@ -50,7 +50,9 @@ try:
 
                 # Draw a circle around the index finger tip
                 cv2.circle(frame, index_finger_tip_coords, 10, (0, 255, 0), -1)  # Green circle
-                
+
+
+
                 # Optionally, you can display coordinates
                 cv2.putText(frame, f'Index Finger: {index_finger_tip_coords}', (10, 30), 
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)

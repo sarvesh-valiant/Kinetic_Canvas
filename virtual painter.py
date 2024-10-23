@@ -23,10 +23,23 @@ cap = cv2.Videocapture(0)
 cap.set(3, 1980)  #determining the width and the height of the images
 cap.set(4, 1080)
 
+detector = ch.handDetector(detectionCon=0.85)
+
 while True:
     success, img = cap.read() #1.importing image
-                             
+   img = cv2.flip(img, 0)     #liping the image horizontally
+
+
+
                               #2.find hand landmarks
+img = detector.findHands(img)
+lmList = detector.findPosition(img, draw=false)
+
+if len(lmList) != 0:
+    print(lmList)
+
+    x1,y1 = lmList[8][1:]    #finding the tip of index and middle fingers
+    x2,y2 = lmList[12][1:]    
 
                               #3.check which fingers are up
 

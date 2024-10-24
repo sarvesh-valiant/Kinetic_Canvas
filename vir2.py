@@ -107,7 +107,7 @@ while True:
 
     xp, yp = x1, y1
 
-imgGray = cv2.cvColor(imgCanvas,cv2.COLOR_BRR2GRAY)   
+imgGray = cv2.cvtColor(imgCanvas,cv2.COLOR_BRR2GRAY)   
 _,imgInv = cv2.threshold(imgGray, 50, 255, cv2.THRESH_BINARY_INV)
 imgInv = cv2.cvtColor(imgInv,cv2.COLOR_GRAY2BGR)
 img = cv2.bitwise_and(img,imgInv)
@@ -115,7 +115,7 @@ img = cv2.bitwise_or(img,imgCanvas)
 
     #setting the header image
 img[0:130, 0:1980] = header
-   # img = cv2.addWeighted(img,3.5,imgCanvas,0.5,0)          cv2.imshow("Image", img)  # Corrected the window name and display the image
-cv2.imshow("Canvas", imgCanvas) 
+img = cv2.addWeighted(img,3.5,imgCanvas,0.5,0)         
+cv2.imshow("Image", img)  # Corrected the window name and display the imagecv2.imshow("Canvas", imgCanvas)         
 cv2.imshow("Inv",imgInv)
 cv2.waitKey(1)

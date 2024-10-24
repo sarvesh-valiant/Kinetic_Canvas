@@ -1,4 +1,4 @@
-import cv2             # Importing the libraries
+import  cv2           # Importing the libraries
 import numpy as np
 import os              # To access the UI files
 import Chidorix as ch
@@ -32,7 +32,7 @@ cap.set(4, 1080)  # Setting the height
 detector = ch.handDetector(detectionCon=0.85)
 
 xp, yp = 0, 0   #setting the values for x previous and y previous
-imgCanvas = np.zeros((1080, 1980, 3), np.vint8)
+imgCanvas = np.zeros((1080, 1980, 3), np.uint8)
 
 while True:
     success, img = cap.read()  # 1. Importing image
